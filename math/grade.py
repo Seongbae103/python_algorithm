@@ -24,7 +24,7 @@ class Solution:
             grade = "E"
         else:
             grade = "F" 
-        return f'{title} \n 총점 {total}, 평균 : {avg}, 학점 : {grade}'
+        return f'{title} \n 총점 : {total}, 평균 : {avg}, 학점 : {grade}'
 
 if __name__=="__main__":
     solution = Solution()
