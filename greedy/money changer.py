@@ -6,14 +6,14 @@
 * 표시하고 10원미만은 절삭
       ******************************************************
          요청금액 : 126520 원
-         5만원 : 2매
-         1만원 : 2매
-         5천원 : 1매
-         1천원 : 1매
-         5백원 : 1개
-         백원 : 0개
-         오십원 : 0개
-         십원 : 2개
+         50000 : 2매
+         10000 : 2매
+         5000 : 1매
+         1000 : 1매
+         500 : 1개
+         100 : 0개
+         50 : 0개
+         10 : 2개
       ********************************************************
 '''
 
@@ -24,17 +24,11 @@ class Solution:
       answer = f'요청금액 : {money}원'
       unit = [50000, 10000, 5000, 1000, 500, 100, 50, 10]
       for i in unit:
-         print(i)
-      a = int(money / unit[0])
-      b = int(money % unit[0] / unit[1])
-      c = int(money % unit[1] / unit[2])
-      d = int(money % unit[2] / unit[3])
-      e = int(money % unit[3] / unit[4])
-      f = int(money % unit[4] / unit[5])
-      g = int(money % unit[5] / unit[6])
-      h = int(money % unit[6] / unit[7])
-
-      return f' {title} \n {aster} \n {answer} \n 5만원 : {a}매 \n 1만원 : {b}매 \n 5천원 : {c} \n 1천원 : {d}매 \n 5백원 : {e}매 \n 백원 : {f}매 \n 오십원 : {g}매 \n 십원 : {h}매'
+         count = money // i
+         money = money % i 
+         print(f'{i}원짜리 {count}개')
+   '''   return f' {title} \n {aster} \n {answer} \n 5만원 : {a}매 \n 1만원 : {b}매 \n 5천원 : {c} \n 1천원 : {d}매 \n 5백원 : {e}매 \n 백원 : {f}매 \n 오십원 : {g}매 \n 십원 : {h}매'
+   '''
       
 if __name__=="__main__":
    solution = Solution()

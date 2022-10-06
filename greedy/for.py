@@ -1,7 +1,13 @@
 def solution():
-    a = [1, 2, 3]
+    money = 1660
+    count = 0
+    a = [500, 100, 50, 10]
     for i in a:
-        print(i)
-
+        count = money // i
+        money = money % i
+        
+ 
+        print(f' {i}원짜리 {count}개')
+        
 if __name__=="__main__":
     solution()
