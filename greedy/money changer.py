@@ -19,7 +19,6 @@
 
 class Solution:
    def solution(self, money):
-      answer = f'요청금액 : {money}원'
       unit = [50000, 10000, 5000, 1000, 500, 100, 50, 10]
       dc = {}
       for i in unit:
@@ -28,11 +27,12 @@ class Solution:
          money = money % i 
       print(" ### 화폐교환 ### ")
       print("*" * 30)
-
+      print(f"요청금액 : {money} 원")
       for k,v in dc.items():
          print(f'{k}원 : {v}매')
+      print("*" * 30)
       
 if __name__=="__main__":
    solution = Solution()
    money = int(input( " 요청금액 : "))
-   print(solution.solution(money))
+   solution.solution(money)
