@@ -19,18 +19,17 @@
 
 class Solution:
    def solution(self, money):
+      title = " ### 화폐교환 ### "
+      aster = "*" * 30
       answer = f'요청금액 : {money}원'
       unit = [50000, 10000, 5000, 1000, 500, 100, 50, 10]
-      dc = {}
+      cnt = {}
       for i in unit:
-         cnt = money // i
-         dc[i] = cnt
-         money = money % i 
-      print(" ### 화폐교환 ### ")
-      print("*" * 30)
-
-      for k,v in dc.items():
-         print(f'{k}원 : {v}매')
+        cnt = money // i
+        money = money % i 
+        print(f' {i}원 : {cnt}개 ')
+   '''   return f' {title} \n {aster} \n {answer} \n 5만원 : {a}매 \n 1만원 : {b}매 \n 5천원 : {c} \n 1천원 : {d}매 \n 5백원 : {e}매 \n 백원 : {f}매 \n 오십원 : {g}매 \n 십원 : {h}매'
+   '''
       
 if __name__=="__main__":
    solution = Solution()
